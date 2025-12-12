@@ -1,10 +1,22 @@
 import grpc
 from concurrent.futures import ThreadPoolExecutor
-from proto import service_pb2_grpc
+from backend.services.pipeline.research_flow import ResearchPipeline
+from proto import service_pb2, service_pb2_grpc
 
 class ResearchService(service_pb2_grpc.ResearchServiceServicer):
     def __init__(self):
         super().__init__()
+
+    def Research(self, request, context):
+        query = request.query
+
+        result = ResearchPipeline.execute(query=query)
+
+        return service_pb2.ResearchResponse(
+            summary=result["summary"],
+            critique=result["critique"],
+            resources=result["resources"]
+        )
 
 def serve():
     # Initialize the gRPC server
