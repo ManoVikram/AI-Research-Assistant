@@ -25,8 +25,12 @@ class ResearchPipeline:
         # Step 3 - Critique
         critique = run_critique(summary=summary)
 
+        # Step 4 - Resources
+        resources = []
+
         return {
             "research_data": research_data,
             "summary": summary,
-            "critique": critique
+            "critique": critique,
+            "resources": resources
         }
