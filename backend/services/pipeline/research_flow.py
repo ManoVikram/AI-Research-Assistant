@@ -1,6 +1,6 @@
-from services.agents.research import run_research
-from services.agents.summary import run_summary
-from services.agents.critique import run_critique
+from agents.research import run_research
+from agents.summary import run_summary
+from agents.critique import run_critique
 
 class ResearchPipeline:
     def __init__(self):

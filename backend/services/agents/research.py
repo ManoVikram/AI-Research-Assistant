@@ -1,6 +1,6 @@
 from langchain_community.tools.google_search import GoogleSearchRun
 from langchain.agents import create_agent
-from services.llm import llm
+from llm import llm
 
 def run_research(query):
     """

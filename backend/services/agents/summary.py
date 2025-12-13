@@ -1,4 +1,4 @@
-from services.llm import llm
+from llm import llm
 
 def run_summary(research_data):
     """

@@ -1,6 +1,6 @@
 import grpc
 from concurrent.futures import ThreadPoolExecutor
-from backend.services.pipeline.research_flow import ResearchPipeline
+from pipeline.research_flow import ResearchPipeline
 from proto import service_pb2, service_pb2_grpc
 
 class ResearchService(service_pb2_grpc.ResearchServiceServicer):
