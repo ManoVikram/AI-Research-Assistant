@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"github.com/ManoVikram/AI-Research-Assistant/backend/api/handlers"
 	"github.com/ManoVikram/AI-Research-Assistant/backend/api/services"
 	"github.com/gin-gonic/gin"
 )
