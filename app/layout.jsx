@@ -15,7 +15,7 @@ const montserratAlternatesFont = Montserrat_Alternates({ subsets: ["latin"], wei
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${philosopherFont.variable} ${montserratAlternatesFont.variable}`}>
-      <body className={`font-philosopher antialiased min-h-dvh w-full`}>
+      <body className={`font-philosopher antialiased flex flex-col h-dvh w-full`}>
         <Navbar />
 
         {children}

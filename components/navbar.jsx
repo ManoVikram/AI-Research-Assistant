@@ -2,10 +2,10 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <nav className='flex flex-row justify-between items-center px-8 py-6 z-50 w-full fixed'>
+        <nav className='flex flex-row justify-between items-center p-8 z-50 w-full fixed'>
             <p className='font-montserrat-alternates'>AI RESEARCH ASSISTANT</p>
 
-            <div className="flex flex-row w-1/2 bg-red-400">
+            <div className="flex flex-row w-1/2 pl-4">
                 <div className="flex flex-row justify-start items-center w-full gap-6">
                     <div className="flex justify-center items-center px-4 py-2 rounded-full bg-gray-50">
                         <p>Research</p>
