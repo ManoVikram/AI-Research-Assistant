@@ -3,7 +3,7 @@ import "./globals.css";
 import { Montserrat_Alternates, Philosopher } from "next/font/google"
 
 export const metadata = {
-  title: "AI Research Assistant",
+  title: "Sazed - An AI Research Assistant",
   description: "An AI-powered research assistant to help you with your research tasks.",
 };
 

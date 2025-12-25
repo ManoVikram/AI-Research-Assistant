@@ -5,7 +5,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <nav className='flex flex-row justify-between items-center p-8 z-50 w-full fixed'>
-            <p className='font-montserrat-alternates'>AI RESEARCH ASSISTANT</p>
+            <p className='font-montserrat-alternates'>Sazed</p>
 
             <div className="flex flex-row w-1/2 pl-4">
                 <div className="flex flex-row justify-start items-center w-full gap-6">
