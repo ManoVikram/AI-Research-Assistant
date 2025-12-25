@@ -1,15 +1,19 @@
 "use client"
 
+import { Spinner } from '@/components/ui/spinner'
 import * as helpers from '@/lib/api/helpers'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
 const ResearchPage = () => {
   const [query, setQuery] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleQuerySubmit = async () => {
+    setIsLoading(true)
     const response = await helpers.research(query)
     console.log(response)
+    setIsLoading(false)
   }
 
   return (
@@ -35,7 +39,11 @@ const ResearchPage = () => {
             </div>
 
             <div className="flex justify-center items-center bg-black rounded-lg aspect-square p-1 relative cursor-pointer" onClick={handleQuerySubmit}>
-              <Image src="/up-arrow.svg" alt='up-arrow' className='object-contain' height={24} width={24} />
+              {isLoading ? (
+                <Spinner className="text-white size-6" />
+              ) : (
+                <Image src="/up-arrow.svg" alt='up-arrow' className='object-contain' height={24} width={24} />
+              )}
             </div>
           </div>
         </div>
